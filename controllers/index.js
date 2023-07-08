@@ -1,10 +1,4 @@
-export * as ProductController from "./product.controllers.js";
-export * as ImgController from "./images.controller.js"
-
-
-///переменные можно закидывать сюда 
-export const testPatchMiddleawate = (data)=>(req, res, next)=>{ 
-   console.log(`PATHC AND ${data}`);
-   next()
-}
-
+export * as CommentsUsersControllers from "./comments-users.controllers.js";
+export * as PostsControllers from "./posts.controllers.js";
+export * as CommentsControllers from "./comments.controllers.js";
+export * as UsersControllers from "./users.controllers.js";
