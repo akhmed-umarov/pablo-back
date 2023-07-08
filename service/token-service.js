@@ -1,4 +1,4 @@
-import TokenModel from '../model/Token'
+import TokenModel from '../model/Token.js'
 import jwt from 'jsonwebtoken';
 
 class TokenService {

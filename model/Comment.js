@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
-const PostSchema = new Schema(
+const CommentSchema = new Schema(
   {
     //айди поста
     postId: {
@@ -37,4 +37,4 @@ const PostSchema = new Schema(
   }
 );
 
-export default mongoose.model("Post", PostSchema);
+export default mongoose.model("Comment", CommentSchema);

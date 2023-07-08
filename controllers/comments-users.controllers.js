@@ -1,6 +1,6 @@
 import { validationResult } from "express-validator";
-import userService from "../service/user-service";
-import ApiError from "../exceptions/api-error";
+import userService from "../service/user-service.js";
+import ApiError from "../exceptions/api-error.js";
 
 export const registration = async (req, res, next) => {
   try {
@@ -71,4 +71,3 @@ export const refresh = async (req, res, next) => {
   }
 };
 
-export default new UserController();

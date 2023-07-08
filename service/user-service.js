@@ -1,10 +1,10 @@
-import CommentUser from '../model/CommentUser';
+import CommentUser from '../model/CommentUser.js';
 import bcrypt from 'bcrypt'
-import uuid from 'uuid'
-import mailService from './mail-service';
-import tokenService from './token-service';
-import UserDto from '../dtos/user-dto';
-import ApiError from '../exceptions/api-error';
+import { v4 as uuidv4 } from 'uuid';
+import mailService from './mail-service.js';
+import tokenService from './token-service.js';
+import UserDto from '../dtos/user-dto.js';
+import ApiError from '../exceptions/api-error.js';
 
 
 class UserService {
@@ -14,7 +14,7 @@ class UserService {
             throw ApiError.BadRequest(`Пользователь с почтой ${email} уже существует`)
         }
         const hashPassword = await bcrypt.hash(password, 3);
-        const activationLink = uuid.v4();   
+        const activationLink = uuidv4();   
 
         const user = await CommentUser.create({email, password: hashPassword, activationLink})
         await mailService.sendActivationMail(email, `${process.env.API_URL}/api/activate/${activationLink}`);
