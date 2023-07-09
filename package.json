@@ -10,14 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akhmed-umarov/todo-test-back.git"
+    "url": "git+https://github.com/akhmed-umarov/pablo-back.git"
   },
   "author": "ahmad.umarov7@gmail.com [Akhmed Umarov]",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/akhmed-umarov/todo-test-back/issues"
-  },
-  "homepage": "https://github.com/akhmed-umarov/todo-test-back#readme",
   "devDependencies": {
     "@types/express": "^4.17.14",
     "nodemon": "^2.0.21"
