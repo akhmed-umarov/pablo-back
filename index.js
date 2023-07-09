@@ -16,7 +16,7 @@ app.use(
     crossDomain: true,
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    origin: process.env.CLIENT_URL,
+    origin: "*",
   })
 );
 
@@ -27,7 +27,7 @@ const start = async () => {
   try {
     await mongoose.connect(process.env.DB_URL, {
       useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useUnifiedTopology: true
     });
     app.listen(PORT, () => console.log(`Server started on PORT = ${PORT}`));
   } catch (e) {
