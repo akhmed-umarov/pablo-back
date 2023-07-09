@@ -16,7 +16,7 @@ app.use(
     crossDomain: true,
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    origin: "*",
+    origin: process.env.CLIENT_URL
   })
 );
 

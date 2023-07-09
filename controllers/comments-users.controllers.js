@@ -52,7 +52,7 @@ export const activate = async (req, res, next) => {
   try {
     const activationLink = req.params.link;
     await userService.activate(activationLink);
-    return res.redirect(`${process.env.CLIENT_URL}/home`);
+    return res.redirect(`${process.env.CLIENT_URL}/posts`);
   } catch (e) {
     next(e);
   }
