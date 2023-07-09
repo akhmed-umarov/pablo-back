@@ -14,7 +14,7 @@ export const getAllPosts = async (req, res) => {
 
 export const getUserPosts = async (req, res) => {
   try {
-    const userId = req.params.id;
+    const userId = req.params.user;
     const posts = await PostModel.find({ userId });
     res.status(200).json(posts);
   } catch (err) {

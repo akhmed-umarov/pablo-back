@@ -27,7 +27,7 @@ router.get("/posts", PostsControllers.getAllPosts);
 router.get("/posts/:user", PostsControllers.getUserPosts);
 
 //получения данных о посте
-router.get("/posts/:id", PostsControllers.getOnePost);
+router.get("/post/:id", PostsControllers.getOnePost);
 
 //получение данных о всех пользователях
 router.get("/users", UsersControllers.getAllUsers);
